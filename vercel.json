@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/serve.js": {
-      "includeFiles": "**"
+      "includeFiles": "Lab*/**,*.pdf,*.png,*.md,*.jpg,*.jpeg,*.gif,*.svg,*.docx,*.txt,*.c,*.h"
     }
   },
   "rewrites": [
