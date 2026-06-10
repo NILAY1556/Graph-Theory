@@ -1,11 +1,16 @@
 {
-  "functions": {
-    "api/*.js": {
-      "includeFiles": "Lab*/**,*.pdf,*.png,*.md,*.jpg,*.jpeg,*.gif,*.svg,*.docx,*.txt,*.c,*.h"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/serve.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["Lab*/**", "*.pdf", "*.png", "*.md", "*.jpg", "*.jpeg", "*.gif", "*.svg", "*.docx", "*.txt", "*.c", "*.h"]
+      }
     }
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/api/serve" },
-    { "source": "/:path*", "destination": "/api/serve?path=:path*" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/api/serve" },
+    { "src": "/(.*)", "dest": "/api/serve?path=$1" }
   ]
 }
