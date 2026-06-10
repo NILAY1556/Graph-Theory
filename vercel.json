@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/serve.js": {
+    "api/*.js": {
       "includeFiles": "Lab*/**,*.pdf,*.png,*.md,*.jpg,*.jpeg,*.gif,*.svg,*.docx,*.txt,*.c,*.h"
     }
   },
